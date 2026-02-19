@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>ToDo App</h1>
+
+      <section class="card">
+        <h2>Add Task</h2>
+        <form id="task-form">
+          <label for="title">Title</label>
+          <input id="title" name="title" maxlength="100" required />
+
+          <label for="description">Description</label>
+          <textarea id="description" name="description" maxlength="500"></textarea>
+
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="toolbar">
+          <h2>Tasks</h2>
+          <div class="filters" id="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="todo">Todo</button>
+            <button data-filter="done">Done</button>
+          </div>
+        </div>
+
+        <p id="message" class="message"></p>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
